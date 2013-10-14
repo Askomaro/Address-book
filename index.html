@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Adress book</title>
+  
+  <script type="text/javascript" src="jquery/jquery-1.8.1.js"></script>
+
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/IDBConnector.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link rel="stylesheet" type="text/css" href="Semantic/css/semantic.css">
+  <script type="text/javascript" src="Semantic/semantic.js"></script>
+</head>
+
+<body>
+
+<div id="menu">
+
+  <div class="ui inverted tiered menu">
+      <a class="active item " data-tab = "contacts">
+        <i class="user  icon" ></i> Contacts
+      </a>
+      
+      <a class="item" data-tab = "groups">
+        <i class="users icon"></i> Groups
+      </a>
+
+
+    <div class="right menu">
+      <div class="borderless vertically fitted item">
+        <div class="ui icon input">
+          <input id = "search_query" type="text" placeholder="Search...">
+          <i id = "search" class="search link black icon"></i>
+        </div>
+      </div>
+
+      <div class="ui dropdown item">
+        <i class="settings icon"></i>
+        Settings <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item">empty</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div  id = "contact" class="ui bottom attached active tab segment" data-tab = "contacts" >
+    
+    <div id = "contact_list" >
+                                             
+    </div>
+
+    <div class="ui vertical divider">
+    <!--   <i class="circular add sign inverted link black icon" data-content="new ...." data-variation="inverted small" data-position="bottom right"></i> -->
+    </div>
+
+
+
+    <div id="editform" >
+      <div class="inverted ui tertiary segment">  
+        <i class="link user massive icon"></i>
+        <div class="title">
+          <h2 id = "edit_title" class="ui center aligned header">
+
+          </h2>
+        </div>
+
+        <a class="ui right green corner large label">
+          <div id = "edit_inform_label" class="text">New</div>
+        </a>
+
+      </div>
+      
+        
+      <div class="ui form segment">
+
+        <div class="two fields">
+          <div class="field">
+            <label>First Name</label>
+            <input placeholder="FirstName" type="text">
+          </div>
+          <div class="field">
+            <label>Last Name</label>
+            <input placeholder="LastName" type="text">
+          </div>
+        </div>
+
+        <div class="two fields">
+          <div class="field">
+            <label>eMail</label>
+            <input placeholder="eMail" type="text">
+          </div>
+          <div class="field">
+            <label>Telephone</label>
+            <input placeholder="Telephone" type="text">
+          </div>
+        </div>        
+
+        <div class="field">
+          <label>Additional info</label>
+          <input placeholder="Some_extra_information" type="text">
+        </div>
+
+        <div class="ui divider"></div>
+
+        <div class="field">
+          <label>Groups</label>
+
+          <div class="ui buttons">
+          
+            <div class="ui tiny dropdown button">
+              <input type="hidden" name="groups">
+              <div id = "groupName" class="default text">add to / change group</div>        
+              <i class="dropdown icon"></i>
+              <div id = "groupDownList" class="menu">
+                <div class="item">Family</div>
+                <div class="item">Friends</div>
+                <div class="item">Favorites</div>
+                <div class="item">Without group</div>
+              </div>
+            </div>
+            <div id = "new_group_from_contact" class="ui teal tiny button">NEW</div>
+
+          </div>
+
+        </div>
+
+      </div>
+        
+      <div id = "edit_buttons" class="tertiary black small ui buttons">
+        <div id = "btnSave" class="ui button">add/save</div>
+        <div class="or"></div>
+        <div id = "btnCancel" class="ui button">Cancel</div>
+      </div>   
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- *****Second Tab***** -->
+  <div  id = "groups" class="ui bottom attached tab segment" data-tab = "groups" >
+
+      <div id = "group_container" class="ui fluid accordion">
+        
+        <div id = "add_new_group_header" class="title">
+          <i class="add icon"></i>
+          Add new group ...
+
+        </div>
+        
+        <div id = "add_new_group_content" class="content">
+          <div class="ui green form segment">
+            <label>Enter the name of group</label>
+            <input id = "newGroupInput" placeholder="Group name" type="text">
+            <div id = "addGroup" class="ui tiny positive button"><i class="users icon"></i> Add group</div>
+            <div id = "cancelGroup" class="ui tiny button"><i class="remove icon"></i> Cancel</div>
+          </div>
+        </div>
+
+          <div id="group_list">
+
+        </div>
+
+      </div>
+
+  </div>
+
+</div>
+
+
+</body>
+</html>
